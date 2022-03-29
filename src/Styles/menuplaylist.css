@@ -1,0 +1,63 @@
+.playlistContainer {
+  cursor: pointer;
+  margin: 15px 0;
+}
+
+.playlistContainer .listTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #848484;
+  margin-bottom: 10px;
+}
+
+.playlistContainer .listTop p {
+  font-size: 12px;
+  font-weight: bold;
+  color: #848484;
+  text-transform: uppercase;
+}
+
+.playlistContainer .listTop i {
+  cursor: pointer;
+  color: #f1f1f1;
+}
+
+.playlistContainer .playListScroll {
+  height: 100px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.playlistContainer .playListScroll .playlist {
+  display: flex;
+  color: #848484;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.playlistContainer .playListScroll .playlist:hover {
+  cursor: pointer;
+  color: #f1f1f1;
+  transition: 0.3s;
+}
+
+.playlistContainer .playListScroll .playlist i {
+  font-size: 18px;
+}
+
+.playlistContainer .playListScroll .playlist .list {
+  margin-right: 15px;
+}
+
+.playlistContainer .playListScroll .playlist .trash {
+  margin-left: auto;
+}
+
+.playlistContainer .playListScroll .playlist p {
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline;
+}

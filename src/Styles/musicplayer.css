@@ -1,0 +1,154 @@
+.musicPlayer {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
+.songImg {
+  width: 120px;
+  min-height: 120px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.songImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.songAtr {
+  width: 100%;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.songAtr .top,
+.songAtr .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.songAtr .top .left,
+.songAtr .top .middle,
+.songAtr .top .right {
+  color: #595959;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.songAtr .top .left i,
+.songAtr .top .middle i,
+.songAtr .top .right i {
+  margin: 0 15px;
+}
+
+.songAtr .top .left .likeSong i {
+  color: #49e12e;
+  filter: drop-shadow(0 0 4px #49e12e);
+}
+
+.songAtr .top .middle .back i:nth-child(2),
+.songAtr .top .middle .forward i:nth-child(1) {
+  color: #9a9a9a;
+}
+
+.songAtr .top .middle .playPause {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 100%;
+  background: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.songAtr .bottom {
+  margin-top: 20px;
+  padding: 0 15px;
+}
+
+.songAtr .bottom .progressBar {
+  width: 70%;
+  position: relative;
+  height: 5px;
+  outline: none;
+  border: none;
+  appearance: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.songAtr .bottom .progressBar::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  background: #848484;
+  width: var(--player-played);
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.songAtr .bottom .progressBar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.songAtr .bottom .progressBar::-moz-range-track {
+  width: 78%;
+  height: 5px;
+  outline: none;
+  border: none;
+  appearance: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.songAtr .bottom .progressBar::-moz-range-progress {
+  background: #848484;
+  width: var(--player-played);
+  height: 100%;
+  border-radius: 10px;
+  z-index: 2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.songAtr .bottom .progressBar::-moz-range-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.songAtr .bottom .currentTime,
+.songAtr .bottom .duration {
+  color: #f1f1f1;
+  font-size: 12px;
+  font-weight: bold;
+}

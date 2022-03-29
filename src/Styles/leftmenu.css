@@ -1,0 +1,100 @@
+.leftMenu {
+  width: 280px;
+  height: 100%;
+  min-height: 100vh;
+  background: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 20px 15px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1;
+}
+
+.leftMenu .logoContainer {
+  color: #f1f1f1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftMenu .logoContainer i {
+  font-size: 30px;
+}
+
+.leftMenu .logoContainer i:nth-child(3) {
+  font-size: 20px;
+}
+
+.leftMenu .logoContainer h2 {
+  font-size: 20px;
+}
+
+.searchBox {
+  width: 100%;
+  height: 45px;
+  position: relative;
+  margin-top: 20px;
+  overflow: hidden;
+  color: #848484;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.searchBox input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  padding-left: 45px;
+  color: #f1f1f1;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.searchBox .searchIcon {
+  position: absolute;
+  color: #848484;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+  /* background: rgba(0, 0, 0, 0.4); */
+  text-align: center;
+  line-height: 45px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 550px) {
+  .leftMenu {
+    width: 64px;
+    min-width: 64px;
+  }
+
+  .leftMenu .searchBox {
+    display: none;
+  }
+
+  .leftMenu .trackList {
+    display: none;
+  }
+
+  .leftMenu .playlistContainer {
+    display: none;
+  }
+
+  .leftMenu .MenuContainer ul li a span {
+    display: none;
+  }
+
+  .leftMenu .MenuContainer ul li a i {
+    font-size: 26px;
+  }
+
+  .leftMenu .MenuContainer ul li {
+    margin: 25px 0;
+  }
+
+  .leftMenu .logoContainer h2 {
+    margin-left: 20px;
+  }
+}
